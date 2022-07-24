@@ -42,4 +42,17 @@ public class UserApiImpl implements UserApi{
         userQueryWrapper.eq("mobile", mobile);
         return userMapper.selectOne(userQueryWrapper);
     }
+
+    /**
+     * 修改手机号码
+     * @param userId
+     * @param phone
+     */
+    @Override
+    public void updateMobile(Long userId, String phone) {
+        User user = new User();
+        user.setMobile(phone);
+        user.setId(userId);
+        userMapper.updateById(user);
+    }
 }

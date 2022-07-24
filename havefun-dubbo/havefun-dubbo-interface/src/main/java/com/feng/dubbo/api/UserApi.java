@@ -22,4 +22,11 @@ public interface UserApi {
      * @return user
      */
     User findByMobile(String mobile);
+
+    /**
+     * 修改手机号码
+     * @param userId
+     * @param phone
+     */
+    void updateMobile(Long userId, String phone);
 }
