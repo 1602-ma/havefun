@@ -1,6 +1,7 @@
 package com.feng.dubbo.api;
 
 import com.feng.domain.db.User;
+import com.feng.domain.db.UserInfo;
 
 /**
  * @author f
