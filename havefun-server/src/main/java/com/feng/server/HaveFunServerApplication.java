@@ -2,6 +2,7 @@ package com.feng.server;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
 
 /**
@@ -9,7 +10,7 @@ import org.springframework.context.annotation.ComponentScan;
  * @author f
  * @date 2022/7/20 23:06
  */
-@SpringBootApplication
+@SpringBootApplication(exclude = MongoAutoConfiguration.class)
 public class HaveFunServerApplication {
 
     public static void main(String[] args) {
