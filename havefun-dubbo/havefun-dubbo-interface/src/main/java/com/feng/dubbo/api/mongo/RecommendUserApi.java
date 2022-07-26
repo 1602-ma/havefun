@@ -1,6 +1,7 @@
 package com.feng.dubbo.api.mongo;
 
 import com.feng.domain.mongo.RecommendUser;
+import com.feng.domain.vo.PageResult;
 
 /**
  * @author f
@@ -14,4 +15,13 @@ public interface RecommendUserApi {
      * @return user
      */
     RecommendUser queryWithMaxScore(Long toUserId);
+
+    /**
+     * 推荐列表分页查询
+     * @param page
+     * @param pagesize
+     * @param userId
+     * @return
+     */
+    PageResult<RecommendUser> findPage(int page, int pagesize, long userId);
 }
